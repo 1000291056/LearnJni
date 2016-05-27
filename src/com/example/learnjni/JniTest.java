@@ -1,9 +1,16 @@
 package com.example.learnjni;
 
+import android.content.Context;
 import android.util.Log;
 
 public class JniTest {
 	public String name = "hello";
+	private Context mContext;
+
+	public JniTest(Context mContext) {
+		super();
+		this.mContext = mContext;
+	}
 
 	public native String getString();
 
@@ -28,6 +35,9 @@ public class JniTest {
 	public native void jniCallBack();
 
 	public native Student getStudent();
+
+	public native String getContentFromPath(String path);
+	// public native void startActivity(Context context);
 
 	public void callBack() {
 		Log.i("jni", "回调成功");

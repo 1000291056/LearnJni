@@ -17,8 +17,16 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		TextView textView = (TextView) findViewById(R.id.helloTv);
-		JniTest test=new JniTest();
-		textView.setText(test.getString());
+		JniTest test=new JniTest(this);
+		int[][] a=test.getTwoArray(8);
+		textView.setText(a.toString());
+//		test.setName();
+//		test.jniCallBack();
+//		Student student=test.getStudent();
+//		if (student!=null) {
+//			textView.setText(student.toString());
+//		}
+		
 //		int[][] a=test.getTwoArray(10);
 //		test.setName();
 //		Log.i("jni", a+"");

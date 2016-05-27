@@ -17,6 +17,14 @@ JNIEXPORT jstring JNICALL Java_com_example_learnjni_JniTest_getString
 
 /*
  * Class:     com_example_learnjni_JniTest
+ * Method:    getFraString
+ * Signature: (Ljava/lang/String;)Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_com_example_learnjni_JniTest_getFraString
+  (JNIEnv *, jobject, jstring);
+
+/*
+ * Class:     com_example_learnjni_JniTest
  * Method:    getTwoArray
  * Signature: (I)[[I
  */
@@ -46,6 +54,14 @@ JNIEXPORT void JNICALL Java_com_example_learnjni_JniTest_jniCallBack
  */
 JNIEXPORT jobject JNICALL Java_com_example_learnjni_JniTest_getStudent
   (JNIEnv *, jobject);
+
+/*
+ * Class:     com_example_learnjni_JniTest
+ * Method:    getContentFromPath
+ * Signature: (Ljava/lang/String;)Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_com_example_learnjni_JniTest_getContentFromPath
+  (JNIEnv *, jobject, jstring);
 
 #ifdef __cplusplus
 }
